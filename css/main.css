@@ -356,3 +356,8 @@ a {
 .img-post-big img {
   display: block;
 }
+
+/* Contacto */
+label {
+  display: block;
+}

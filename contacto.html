@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <title>Contacto | Bienes Raices</title>
+    <title>Blog | Bienes Raices</title>
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link
       rel="stylesheet"
@@ -13,7 +13,132 @@
     />
   </head>
   <body>
-    <h1>Contacto</h1>
-    <a href="./index.html">Volver</a>
+    <!DOCTYPE html>
+    <html lang="es">
+      <head>
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <title>Bienes Raices</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <link
+          rel="stylesheet"
+          type="text/css"
+          media="screen"
+          href="./css/normalize.css"
+        />
+        <link
+          rel="stylesheet"
+          type="text/css"
+          media="screen"
+          href="./css/main.css"
+        />
+      </head>
+      <body>
+        <header class="site-header">
+          <div class="contenedor contenido-header">
+            <div class="barra">
+              <a href="./index.html"
+                ><img src="./img/logo.svg" alt="Logotipo de Bienes Raices"
+              /></a>
+              <nav class="navegacion">
+                <a href="./nosotros.html">Nosotros</a>
+                <a href="./anuncios.html">Anuncios</a>
+                <a href="./blog.html">Blog</a>
+                <a href="./contacto.html">Contacto</a>
+              </nav>
+            </div>
+          </div>
+        </header>
+        <h1 class="fw-300 texto-centro">Contacto</h1>
+        <img src="./img/destacada.jpg" alt="Imagen principal" />
+        <main class="contenedor seccion contenido-centrado">
+          <h2 class="fw-300 texto-centro">Llena el formulario de Contacto</h2>
+          <form action="">
+            <fieldset>
+              <legend>Información Personal</legend>
+              <label for="nombre">Nombre: </label>
+              <input
+                type="text"
+                name="nombre"
+                id="nombre"
+                placeholder="Tu Nombre"
+                required
+              />
+              <label for="email">Email: </label>
+              <input
+                type="email"
+                name="email"
+                id="email"
+                placeholder="Tu Email"
+                required
+              />
+              <label for="tel">Telefono: </label>
+              <input type="tel" name="tel" id="tel" placeholder="Tu Teléfono" />
+              <label for="mensaje">Mensaje: </label>
+              <textarea name="mensaje" id="mensaje"></textarea>
+            </fieldset>
+            <fieldset>
+              <legend>Información sobre Propiedad</legend>
+              <label for="compraventa">Compra o Vende</label>
+              <select name="compraventa" id="compraventa">
+                <option disabled selected>*Seleccione una opcion*</option>
+                <option value="vende">Vende</option>
+                <option value="compra">Compra</option>
+              </select>
+              <label for="presupuesto">Presupuesto: </label>
+              <input
+                type="number"
+                name="presupuesto"
+                id="presupuesto"
+                min="0"
+                max="10"
+              />
+            </fieldset>
+            <fieldset>
+              <legend>Contacto</legend>
+              <p>Cómo desea ser contactado:</p>
+              <label for="contacto">Teléfono</label>
+              <input
+                type="radio"
+                name="contacto-opciones"
+                id="contacto-tel"
+                value="contacto-tel"
+              />
+              <label for="contacto">Correo</label>
+              <input
+                type="radio"
+                name="contacto-opciones"
+                id="contacto-email"
+                value="contacto-email"
+              />
+
+              <p>Si Eligió Teléfono, elija la Fecha y Hora:</p>
+              <label for="fecha">Fecha</label>
+              <input type="date" name="fecha" id="fecha" />
+              <label for="hora">Hora</label>
+              <input
+                type="time"
+                name="hora"
+                id="hora"
+                min="09:00"
+                max="17:00"
+              />
+            </fieldset>
+            <input type="submit" value="Enviar" class="btn btn-verde" />
+          </form>
+        </main>
+        <footer class="site-footer seccion">
+          <div class="contenedor contenedor-footer">
+            <nav>
+              <a href="./nosotros.html">Nosotros</a>
+              <a href="./anuncios.html">Anuncios</a>
+              <a href="./blog.html">Blog</a>
+              <a href="./contacto.html">Contacto</a>
+            </nav>
+            <p class="copyright">&copy; Todos los Derechos Reservados 2020</p>
+          </div>
+        </footer>
+      </body>
+    </html>
   </body>
 </html>
