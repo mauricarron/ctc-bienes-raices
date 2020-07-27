@@ -75,6 +75,10 @@ img {
   color: #ffffff;
   text-align: center;
   text-decoration: none;
+  border: none;
+}
+.btn:hover {
+  cursor: pointer;
 }
 
 .btn-naranja {
@@ -358,6 +362,38 @@ a {
 }
 
 /* Contacto */
+form p {
+  margin: 0;
+  color: #333333;
+}
+
+legend {
+  font-size: 2rem;
+  color: #333333;
+}
+
 label {
   display: block;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+input:not([type="submit"]),
+textarea,
+select {
+  display: block;
+  width: 100%;
+  margin-bottom: 2rem;
+  padding: 1rem;
+  background-color: #e1e1e1;
+  border: none;
+}
+
+input.form-enviar {
+  display: block;
+  margin-left: 0rem;
+  width: 100%;
+}
+select {
+  appearance: none;
 }
