@@ -7,7 +7,6 @@
 
 html {
   box-sizing: border-box;
-
   font-size: 62.5%; /*1rem = 10px*/
 }
 
@@ -20,6 +19,7 @@ body {
 @import url("https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&display=swap");
 
 .contenedor {
+  width: 95%;
   max-width: 120rem;
   margin: 0 auto;
 }
@@ -68,6 +68,8 @@ img {
 
 /* Botones */
 .btn {
+  display: block;
+  flex: 0 0 100%;
   margin: 2rem;
   padding: 1rem 3rem;
   font-weight: 700;
@@ -77,6 +79,14 @@ img {
   text-decoration: none;
   border: none;
 }
+
+@media (min-width: 768px) {
+  .btn {
+    display: inline-block;
+    flex: 0 0 auto;
+  }
+}
+
 .btn:hover {
   cursor: pointer;
 }
@@ -109,6 +119,13 @@ img {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  text-align: center;
+}
+
+@media (min-width: 768px) {
+  .contenido-header {
+    text-align: left;
+  }
 }
 
 .contenido-header h1 {
@@ -118,35 +135,80 @@ img {
 }
 
 .barra {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
   padding-top: 3rem;
+}
+
+@media (min-width: 768px) {
+  .barra {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
 }
 
 /* Navegacion */
 .navegacion a {
-  color: #fff;
+  display: block;
+  font-size: 2.2rem;
   text-decoration: none;
-  font-size: 1.8rem;
-  margin-right: 2rem;
+  color: #fff;
+  margin: 1rem 0rem;
 }
+@media (min-width: 768px) {
+  .navegacion a {
+    display: inline-block;
+    margin-right: 2rem;
+    font-size: 1.8rem;
+  }
+  .navegacion a:last-of-type {
+    margin-right: 0;
+  }
+}
+
 .navegacion a:hover {
   color: #71b100;
 }
-.navegacion a:last-of-type {
-  margin-right: 0;
+
+.navegacion {
+  display: none;
+}
+
+.navegacion:target {
+  display: block;
+}
+
+@media (min-width: 768px) {
+  .navegacion {
+    display: block;
+  }
+}
+.mobile-menu img {
+  width: 3rem;
+}
+
+@media (min-width: 768px) {
+  .mobile-menu {
+    display: none;
+  }
 }
 
 /* Seccion Nosotros */
-.iconos-nosotros {
-  display: flex;
-  justify-content: space-between;
+
+@media (min-width: 768px) {
+  .iconos-nosotros {
+    display: flex;
+    justify-content: space-between;
+  }
 }
 
 .icono {
-  flex-basis: calc(33.3% - 1rem);
   text-align: center;
+}
+
+@media (min-width: 768px) {
+  .icono {
+    flex-basis: calc(33.3% - 1rem);
+  }
 }
 
 .icono h3 {
@@ -154,10 +216,12 @@ img {
 }
 
 /* Seccion Anuncios */
-.contenedor-anuncios {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
+@media (min-width: 768px) {
+  .contenedor-anuncios {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
 }
 .anuncio {
   flex-shrink: 0;
@@ -204,9 +268,18 @@ img {
 }
 
 .btn-ver {
-  margin-right: 0;
+  flex: 0 0 100%;
+  margin: 0;
 }
 
+@media (min-width: 768px) {
+  .btn-ver {
+    flex: 0 0 auto;
+    margin-right: 0;
+  }
+}
+
+/* Seccion Contactanos*/
 .img-contacto {
   height: 40rem;
   display: flex;
@@ -217,8 +290,12 @@ img {
 }
 
 .contenido-contacto {
-  flex: 1;
+  flex: 0 0 95%;
   color: #ffffff;
+}
+
+.contenido-contacto a {
+  margin: 0;
 }
 
 .contenido-contacto p {
@@ -226,19 +303,26 @@ img {
 }
 
 /* Seccion Inferior */
-.seccion-inferior {
-  display: flex;
-  justify-content: space-between;
-}
+@media (min-width: 768px) {
+  .seccion-inferior {
+    display: flex;
+    justify-content: space-between;
+  }
 
-.seccion-inferior .blog {
-  flex-basis: 60%;
+  .seccion-inferior .blog {
+    flex-basis: 60%;
+  }
 }
 
 .blog-post {
-  display: flex;
-  justify-content: space-between;
   margin-bottom: 2rem;
+}
+
+@media (min-width: 768px) {
+  .blog-post {
+    display: flex;
+    justify-content: space-between;
+  }
 }
 
 .blog-post .img-post {
@@ -312,10 +396,26 @@ img {
   margin: 0;
 }
 
+.site-footer nav {
+  display: none;
+}
+
+@media (min-width: 768px) {
+  .site-footer nav {
+    display: block;
+  }
+}
+
 .contenedor-footer {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   padding: 3rem 0rem;
+}
+
+@media (min-width: 768px) {
+  .contenedor-footer {
+    justify-content: space-between;
+  }
 }
 
 a {
@@ -336,10 +436,12 @@ a {
 
 /* INTERNAS */
 /* Nosotros */
-.contenido-nosotros {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 2rem;
+@media (min-width: 768px) {
+  .contenido-nosotros {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+  }
 }
 
 .txt-nosotros blockquote {
