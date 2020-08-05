@@ -7,8 +7,8 @@ Proyecto de aprendizaje realizado en el curso de Diseño Web con HTML 5 y CSS 3 
 ## 🔍 Objetivos
 
 Aprender las etiquetas semánticas de HTML  y tener un acercamiento a las nuevas tecnologías de CSS.
-
 Luego se agregó responsive design al sitio.
+Deployear en netlify.
 
 ## ✅ Tecnologías
 
